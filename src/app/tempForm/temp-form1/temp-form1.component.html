@@ -1,0 +1,59 @@
+<div class="container align-center">
+  <div class="row">
+    <div class="form-bg">
+      <form #regForm="ngForm" (ngSubmit)="register(regForm)">
+        <h2 class="text-center mt-2">Registration Form</h2>
+        <br />
+        <div class="form-group">
+          <input
+            type="text"
+            placeholder="Enter First Name"
+            class="form-control"
+            name="fName"
+            required
+            ngModel
+          />
+        </div>
+        <br />
+        <div class="form-group">
+          <input
+            type="text"
+            placeholder="Enter Last Name"
+            class="form-control"
+            name="lName"
+            required
+            ngModel
+          />
+        </div>
+        <br />
+        <div class="form-group">
+          <input
+            type="text"
+            placeholder="Enter Email"
+            class="form-control"
+            name="email"
+            required
+            email
+            ngModel
+            #email="ngModel"
+          />
+          <span class="help-bpx" *ngIf="email.touched && !email.valid"
+            >Please Enter valid email address</span
+          >
+        </div>
+        <br />
+        <div class="form-group text-center">
+          <button
+            type="submit"
+            class="btn btn-primary"
+            id="register"
+            [disabled]="!regForm.valid"
+          >
+            Register
+          </button>
+        </div>
+        <br />
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<h1>Angular</h1>
+
+<div (click)="print2()">
+  <button (click)="print($event)">Click me</button>
+</div>
+
+<div style="height: 20px; margin-top: 20px">
+  <input #name type="text" />
+  <button (click)="extractValue(name.value)">Click Me</button>
+</div>
+
+<div style="height: 20px; margin-top: 20px">
+  <input [(ngModel)]="text2" type="text" />
+  <button (click)="egTwoWayBind()">Click Me</button>
+</div>

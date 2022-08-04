@@ -1,0 +1,122 @@
+<div class="center-content">
+  <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title>Login/Register</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+      <mat-tab-group>
+        <form [formGroup]="regForm" (ngSubmit)="register()">
+          <mat-tab lable="Login">
+            <mat-form-field class="example-full-width">
+              <!-- <mat-lable>Email</mat-lable> -->
+              <input
+                type="email"
+                matInput
+                placeholder="Email"
+                class="form-control"
+                formControlName="email"
+              />
+
+              <mat-icon matSuffix>email</mat-icon>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+              <!-- <mat-lable>Password</mat-lable> -->
+              <input
+                type="password"
+                matInput
+                placeholder="Password"
+                class="form-control"
+                formControlName="password"
+              />
+              <mat-icon matSuffix>vpn_key</mat-icon>
+            </mat-form-field>
+
+            <button mat-button color="primary" (click)="login()">Login</button>
+          </mat-tab>
+
+          <mat-tab lable="Register">
+            <mat-form-field class="example-full-width">
+              <!-- <mat-lable>Email</mat-lable> -->
+              <input
+                type="text"
+                matInput
+                placeholder="Name"
+                class="form-control"
+                formControlName="fullName"
+              />
+
+              <mat-icon matSuffix>face</mat-icon>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+              <!-- <mat-lable>Email</mat-lable> -->
+              <input
+                type="text"
+                matInput
+                placeholder="Address"
+                class="form-control"
+                formControlName="address"
+              />
+              <mat-icon matSuffix>home</mat-icon>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+              <!-- <mat-lable>Email</mat-lable> -->
+              <input
+                type="text"
+                matInput
+                placeholder="Number"
+                class="form-control"
+                formControlName="phNo"
+              />
+              <mat-icon matSuffix>perm_phone_msg</mat-icon>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+              <!-- <mat-lable>Email</mat-lable> -->
+              <input
+                type="email"
+                matInput
+                placeholder="Email"
+                class="form-control"
+                formControlName="rEmail"
+              />
+
+              <mat-icon matSuffix>email</mat-icon>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+              <!-- <mat-lable>Password</mat-lable> -->
+              <input
+                type="password"
+                matInput
+                placeholder="Password"
+                class="form-control"
+                formControlName="rPassword"
+              />
+              <mat-icon matSuffix>vpn_key</mat-icon>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+              <!-- <mat-lable>Password</mat-lable> -->
+              <input
+                type="password"
+                matInput
+                placeholder="ConfirmPassword"
+                class="form-control"
+                formControlName="cPassword"
+              />
+              <mat-icon matSuffix>vpn_key</mat-icon>
+            </mat-form-field>
+
+            <button mat-button color="primary" (click)="register()">
+              Register
+            </button>
+          </mat-tab>
+        </form>
+      </mat-tab-group>
+    </mat-card-content>
+  </mat-card>
+</div>

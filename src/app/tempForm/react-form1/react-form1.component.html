@@ -1,0 +1,51 @@
+<div class="container align-center">
+  <div class="row">
+    <div class="form-bg">
+      <form [formGroup]="signupForm" (ngSubmit)="register()">
+        <h2 class="text-center mt-2">Registration Form</h2>
+        <br />
+        <div class="form-group">
+          <input
+            type="text"
+            placeholder="Enter First Name"
+            class="form-control"
+            formControlName="fname"
+          />
+        </div>
+        <br />
+        <div class="form-group">
+          <input
+            type="text"
+            placeholder="Enter Last Name"
+            class="form-control"
+            formControlName="lname"
+          />
+        </div>
+        <br />
+        <div class="form-group">
+          <input
+            type="text"
+            placeholder="Enter Email"
+            class="form-control"
+            formControlName="email"
+          />
+          <!-- <span class="help-bpx" *ngIf="email.touched && !email.valid"
+            >Please Enter valid email address</span
+          > -->
+        </div>
+        <br />
+        <div class="form-group text-center">
+          <button
+            type="submit"
+            class="btn btn-primary"
+            id="register"
+            [disabled]="!signupForm.valid"
+          >
+            Register
+          </button>
+        </div>
+        <br />
+      </form>
+    </div>
+  </div>
+</div>
