@@ -8,7 +8,7 @@
   background-size: cover;
 }
 .center-content {
-  margin-top: 100px;
+  margin-top: 50px;
   text-align: -webkit-center;
 }
 
@@ -23,10 +23,33 @@
   width: 100%;
 }
 
-.mat-button {
+.mat-raised-button {
   margin-top: 10px;
   width: 100%;
   color: white;
   height: 40px;
   background-color: #3f51b5;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mat-radio-group,
+label {
+  display: flex;
+  justify-content: left;
+  font-size: small;
+  margin-top: auto;
+}
+
+input {
+  height: 15px;
+}
+
+span {
+  justify-content: left;
+  color: red;
+  font-size: small;
 }

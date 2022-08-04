@@ -17,6 +17,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { RegistrationFormComponent } from './tempForm/registration-form/registration-form.component';
+import { MatRadioModule } from '@angular/material/radio';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { RegistrationFormComponent } from './tempForm/registration-form/registra
     MatButtonModule,
     MatIconModule,
     MatSnackBarModule,
+    MatRadioModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
