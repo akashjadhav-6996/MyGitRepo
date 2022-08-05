@@ -53,7 +53,7 @@ export class MtrlFormComponent implements OnInit {
     return this.regForm.get('rEmail');
   }
   get rPassword() {
-    return this.regForm.get('rEmail');
+    return this.regForm.get('rPassword');
   }
   get cPassword() {
     return this.regForm.get('cPassword');

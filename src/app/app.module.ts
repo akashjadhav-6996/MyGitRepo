@@ -18,6 +18,12 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { RegistrationFormComponent } from './tempForm/registration-form/registration-form.component';
 import { MatRadioModule } from '@angular/material/radio';
+import { LogInFormComponent } from './tempForm/log-in-form/log-in-form.component';
+import { AppointmentFormComponent } from './tempForm/appointment-form/appointment-form.component';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatSelectModule } from '@angular/material/select';
+import { UserModule } from './user/user.module';
 
 @NgModule({
   declarations: [
@@ -28,6 +34,8 @@ import { MatRadioModule } from '@angular/material/radio';
     ReactForm1Component,
     MtrlFormComponent,
     RegistrationFormComponent,
+    LogInFormComponent,
+    AppointmentFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,6 +51,10 @@ import { MatRadioModule } from '@angular/material/radio';
     MatIconModule,
     MatSnackBarModule,
     MatRadioModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatSelectModule,
+    UserModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

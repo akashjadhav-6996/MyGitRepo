@@ -7,60 +7,115 @@
     <mat-card-content>
       <form [formGroup]="regForm" (ngSubmit)="register()">
         <mat-form-field class="example-full-width">
-          <input type="text" matInput placeholder="Name" class="form-control" formControlName="fullName" />
+          <input
+            type="text"
+            matInput
+            placeholder="Name"
+            class="form-control"
+            formControlName="fullName"
+          />
           <mat-icon matSuffix>face</mat-icon>
         </mat-form-field>
-        <span class="help-bpx" *ngIf="fullName?.touched && !fullName?.valid">Please Enter valid Fullname</span>
-
+        <span class="help-bpx" *ngIf="fullName?.touched && !fullName?.valid"
+          >Please Enter valid Fullname</span
+        >
 
         <mat-form-field class="example-full-width">
-          <input type="text" matInput placeholder="Address" class="form-control" formControlName="address" />
+          <input
+            type="text"
+            matInput
+            placeholder="Address"
+            class="form-control"
+            formControlName="address"
+          />
           <mat-icon matSuffix>home</mat-icon>
         </mat-form-field>
-        <span class="help-bpx" *ngIf="address?.touched && !address?.valid">Please Enter valid Address</span>
+        <span class="help-bpx" *ngIf="address?.touched && !address?.valid"
+          >Please Enter valid Address</span
+        >
 
         <mat-form-field class="example-full-width">
-          <input type="tel" matInput placeholder="Number" class="form-control" formControlName="phNo" />
+          <input
+            type="tel"
+            matInput
+            placeholder="Number"
+            class="form-control"
+            formControlName="phNo"
+          />
           <mat-icon matSuffix>perm_phone_msg</mat-icon>
         </mat-form-field>
-        <span class="help-bpx" *ngIf="phNo?.touched && !phNo?.valid">Please Enter valid Phone Number</span>
+        <span class="help-bpx" *ngIf="phNo?.touched && !phNo?.valid"
+          >Please Enter valid Phone Number</span
+        >
 
         <mat-form-field class="example-full-width">
-          <input type="email" matInput placeholder="Email" class="form-control" formControlName="rEmail" />
+          <input
+            type="email"
+            matInput
+            placeholder="Email"
+            class="form-control"
+            formControlName="rEmail"
+          />
           <mat-icon matSuffix>email</mat-icon>
         </mat-form-field>
-        <span class="help-bpx" *ngIf="rEmail?.touched && !rEmail?.valid">Please Enter valid Email</span>
+        <span class="help-bpx" *ngIf="rEmail?.touched && !rEmail?.valid"
+          >Please Enter valid Email</span
+        >
 
         <mat-form-field class="example-full-width">
-          <input type="password" matInput placeholder="Password" class="form-control" formControlName="rPassword" />
+          <input
+            type="password"
+            matInput
+            placeholder="Password"
+            class="form-control"
+            formControlName="rPassword"
+          />
           <mat-icon matSuffix>vpn_key</mat-icon>
         </mat-form-field>
-        <span class="help-bpx" *ngIf="rPassword?.touched && !rPassword?.valid">Please Enter valid Password [3-10
-          Char]</span>
+        <span class="help-bpx" *ngIf="rPassword?.touched && !rPassword?.valid"
+          >Please Enter valid Password [3-10 Char]</span
+        >
 
         <mat-form-field class="example-full-width">
-          <input type="password" matInput placeholder="ConfirmPassword" class="form-control"
-            formControlName="cPassword" />
+          <input
+            type="password"
+            matInput
+            placeholder="ConfirmPassword"
+            class="form-control"
+            formControlName="cPassword"
+          />
           <mat-icon matSuffix>vpn_key</mat-icon>
         </mat-form-field>
-        <span class="help-bpx"
-          *ngIf="cPassword?.touched && !cPassword?.valid && cPassword?.value !== rPassword?.value">Password
-          does
-          not Match</span>
-
-
+        <span
+          class="help-bpx"
+          *ngIf="
+            cPassword?.touched && !cPassword?.valid && cPassword !== rPassword
+          "
+          >Password does not Match</span
+        >
+        <!-- <mat-form-field class="example-full-width"> -->
         <label class="align-left">Gender : </label>
         <mat-radio-group formControlName="gender">
-          <mat-radio-button value="Male">Male</mat-radio-button>&nbsp;&nbsp;&nbsp;
-          <mat-radio-button value="Female">Female</mat-radio-button>
+          <mat-radio-button color="primary" value="Male">Male</mat-radio-button
+          >&nbsp;&nbsp;&nbsp;
+          <mat-radio-button color="primary" value="Female"
+            >Female</mat-radio-button
+          >
         </mat-radio-group>
-        <span class="help-bpx" *ngIf="gender?.touched && !gender?.valid">Please Select Gender</span>
+        <!-- </mat-form-field> -->
+        <span class="help-bpx" *ngIf="gender?.touched && !gender?.valid"
+          >Please Select Gender</span
+        >
 
-
-        <button mat-raised-button color="primary" type="submit" [disabled]="!regForm.valid">Register</button>
-
+        <button
+          mat-raised-button
+          color="primary"
+          type="submit"
+          [disabled]="!regForm.valid"
+        >
+          Register
+        </button>
       </form>
-
     </mat-card-content>
   </mat-card>
 </div>
